@@ -6,6 +6,8 @@
     
     <name>Phone Block Plugin</name>
     
+    <author>Ripper Design and Multimedia</author>
+    
     <description>
       This plugin is for the blocking of incoming phonecalls on a mobile when the plguin is active.
       
@@ -14,5 +16,22 @@
     
     <license>Apache 2.0</license>
     
+    <preference name="APP_ID" />
+    <preference name="APP_NAME" />
     
+    <!-- JavaScript interface -->
+    <js-module src="www/phonegap/plugin/PhoneBlockPlugin/phoneblock.js" 
+    		  name="PhoneBlockPlugin" 
+    		target="phonegap/plugin/PhoneBlockPlugin/phoneblock.js">
+        <clobbers target="window.PhoneBlockPlugin" />
+    </js-module>
+
+    <engines>
+      <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    
+    <platform name="android">
+        
+        
+    </platform>
 </plugin>
