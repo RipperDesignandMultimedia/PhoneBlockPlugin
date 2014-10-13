@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.ripperdesignandmultimedia.phoneblockplugin"
+    version="0.4.0">
+    
+    <name>Phone Block Plugin</name>
+    
+    <description>
+      This plugin is for the blocking of incoming phonecalls on a mobile when the plguin is active.
+      
+      This is primarily for road saftey enabling us to block calls when a driver is driving.
+    </description>
+    
+    <license>Apache 2.0</license>
+    
+    
+</plugin>
