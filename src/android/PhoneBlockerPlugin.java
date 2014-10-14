@@ -119,7 +119,7 @@ public class PhoneBlockerPlugin extends CordovaPlugin{
 			return pluginResult;
 		}
 		else if (action.equals("stopMonitoringPhoneState")) {
-			removePhoneListener();
+			removePhoneBlocker();
             this.updatePhoneState("", false); // release status callback
             this.phoneBlockerCallbackId = null;
             return new PluginResult(PluginResult.Status.NO_RESULT);
@@ -131,7 +131,7 @@ public class PhoneBlockerPlugin extends CordovaPlugin{
 	/**
      * Stop the phone listener receiver and set it to null.
      */
-    private void removePhoneListener() {
+    private void removePhoneBlocker() {
         if (this.receiver != null) {
             try {
                 this.ctx.getContext().unregisterReceiver(this.receiver);
@@ -146,6 +146,6 @@ public class PhoneBlockerPlugin extends CordovaPlugin{
 	 * Stop phone listener receiver.
 	 */
 	public void onDestroy() {
-		removePhoneListener();
+		removePhoneBlocker();
 	}
 }
