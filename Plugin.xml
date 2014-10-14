@@ -38,6 +38,7 @@
         <config-file target="AndroidManifest.xml" parent="/*">
             <!-- ADD permissions required by the app here using this format
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         </config-file>
 
         <source-file src="src/android/PhoneBlockerPlugin.java" target-dir="src/android/phoneblock" />
