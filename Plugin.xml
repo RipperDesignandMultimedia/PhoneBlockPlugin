@@ -20,10 +20,8 @@
     <preference name="APP_NAME" />
     
     <!-- JavaScript interface -->
-    <js-module src="www/phonegap/plugin/PhoneBlockPlugin/phoneblock.js" 
-    		  name="PhoneBlockPlugin" 
-    		target="phonegap/plugin/PhoneBlockPlugin/phoneblock.js">
-        <clobbers target="window.PhoneBlockPlugin" />
+    <js-module src="www/phoneblock.js" name="PhoneBlockPlugin" >
+        <clobbers target="PhoneBlockPlugin" />
     </js-module>
 
     <engines>
@@ -31,7 +29,22 @@
     </engines>
     
     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="PhoneBlock">
+                <param name="android-package" value="com.ripperdesignandmultimedia.phoneblockplugin.phoneblock"/>
+            </feature>
+        </config-file>
         
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <!-- ADD permissions required by the app here using this format
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+        </config-file>
+
+        <source-file src="src/android/PhoneBlockerPlugin.java" target-dir="src/android/phoneblock" />
+
+        <js-module src="www/phoneblock.js" name="PhoneBlock">
+            <clobbers target="PhoneBlock" />
+        </js-module>
         
     </platform>
 </plugin>
