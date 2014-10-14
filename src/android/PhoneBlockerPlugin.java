@@ -1,4 +1,4 @@
-package com.ripperdesigns.eyesuperic;
+package com.ripperdesignandmultimedia.phoneblockplugin;
 
 import org.apache.cordova.api.CallbackContext;
 import org.apache.cordova.api.CordovaPlugin;
