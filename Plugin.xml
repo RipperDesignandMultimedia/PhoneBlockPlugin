@@ -39,6 +39,9 @@
             <!-- ADD permissions required by the app here using this format
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
             <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+            <uses-permission android:name="android.permission.CALL_PHONE" />
+            <uses-permission android:name="android.permission.PROCESS_INCOMING_CALLS" />
         </config-file>
 
         <source-file src="src/android/PhoneBlockerPlugin.java" target-dir="src/android/phoneblock" />
