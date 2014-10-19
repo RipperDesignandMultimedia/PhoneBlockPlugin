@@ -133,18 +133,18 @@ public class PhoneBlockerPlugin extends CordovaPlugin{
 	}
 	
 	/**
-     * Stop the phone listener receiver and set it to null.
-     */
-    private void removePhoneBlocker() {
-        if (this.receiver != null) {
-            try {
-                this.ctx.getContext().unregisterReceiver(this.receiver);
-                this.receiver = null;
-            } catch (Exception e) {
-                Log.e(LOG_TAG, "Error unregistering phone listener receiver: " + e.getMessage(), e);
-            }
-        }
-    }
+     	* Stop the phone listener receiver and set it to null.
+     	*/
+    	private void removePhoneBlocker() {
+        	if (this.receiver != null) {
+            		try {
+                		this.ctx.getContext().unregisterReceiver(this.receiver);
+                		this.receiver = null;
+            		} catch (Exception e) {
+                		Log.e(LOG_TAG, "Error unregistering phone listener receiver: " + e.getMessage(), e);
+            		}
+        	}
+    	}
 	
 	/**
 	 * Stop phone listener receiver.
