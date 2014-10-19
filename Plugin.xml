@@ -16,9 +16,6 @@
     
     <license>Apache 2.0</license>
     
-    <preference name="APP_ID" />
-    <preference name="APP_NAME" />
-    
     <!-- JavaScript interface -->
     <js-module src="www/phoneblock.js" name="PhoneBlockPlugin" >
         <clobbers target="PhoneBlockPlugin" />
