@@ -120,9 +120,12 @@ public class PhoneBlockerPlugin extends CordovaPlugin{
 		}
 		else if (action.equals("stopMonitoringPhoneState")) {
 			removePhoneBlocker();
-            this.updatePhoneState("", false); // release status callback
-            this.phoneBlockerCallbackId = null;
-            return new PluginResult(PluginResult.Status.NO_RESULT);
+            		this.updatePhoneState("", false); // release status callback
+            		this.phoneBlockerCallbackId = null;
+        		return new PluginResult(PluginResult.Status.NO_RESULT);
+		}
+		else if (action.equals("stopPhoneCall")) {
+			onReceive();
 		}
 		
 		return new PluginResult(status, result); // no valid action called
@@ -147,5 +150,18 @@ public class PhoneBlockerPlugin extends CordovaPlugin{
 	 */
 	public void onDestroy() {
 		removePhoneBlocker();
+	}
+	
+	public void onReceive() {
+		try {
+			TelephonyManager localTelephonyManager;
+          		Method localMethod = Class.forName(localTelephonyManager.getClass().getName()).getDeclaredMethod("getITelephony", new Class[0]);
+          		localMethod.setAccessible(true);
+          		this.telephonyService = ((ITelephony)localMethod.invoke(localTelephonyManager, new Object[0]));
+          		this.telephonyService.endCall();
+          		return;
+		} catch (Exception e) {
+			Log.e(LOG_TAG, "Couldn't Block Call: " + e.getMessage(), e);	
+		}	
 	}
 }
