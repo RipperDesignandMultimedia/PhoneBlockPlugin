@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import com.android.internal.telephony.ITelephony;
 
 public class PhoneBlockerPlugin extends CordovaPlugin{
 	
