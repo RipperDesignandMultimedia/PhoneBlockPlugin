@@ -25,4 +25,12 @@ var PhoneBlockerPlugin = {
 			'stopMonitoringPhoneState',
 			[]); // no arguments required
 	}
+	stopPhoneCall: function(successCallback, failureCallback) {
+		return cordova.exec(    
+			successCallback,
+			failureCallback,
+			'PhoneBlockerPlugin',
+			'stopPhoneCall',
+			[]); // no arguments required
+	}
 };
