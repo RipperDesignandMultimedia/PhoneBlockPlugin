@@ -3,10 +3,12 @@
  * 	PhoneBlockPlugin PhoneGap plugin (Android)
  *
  * 	Created by Stephen Northcott of Ripper Design and Multimedia on 14/10/2014.
- * 	Copyright 2011 Ripper Design and Multimedia. All rights reserved.
+ * 	Copyright 2014 Ripper Design and Multimedia. All rights reserved.
  * 	MIT Licensed
  *
  *  This file contains the sample javascript calls for our app.
+ *  
+ *  Major chunks taken from DevGeeks PhoneListener
  */
  
 function onPhoneBlockStart()
