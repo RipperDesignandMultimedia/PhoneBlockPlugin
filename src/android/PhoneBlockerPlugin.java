@@ -10,9 +10,9 @@
  
 package com.ripperdesignandmultimedia.phoneblockplugin;
 
-import org.apache.cordova.api.CordovaInterface;
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 
 import org.json.JSONObject;
 import org.json.JSONArray;
