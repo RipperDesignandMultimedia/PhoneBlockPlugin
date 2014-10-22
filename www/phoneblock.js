@@ -6,6 +6,7 @@
  * 	Copyright 2011 Ripper Design and Multimedia. All rights reserved.
  * 	MIT Licensed
  *
+ * 	Major chunks taken from DevGeeks PhoneListener
  */
 
 var PhoneBlockerPlugin = { 
